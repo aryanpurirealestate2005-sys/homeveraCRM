@@ -127,6 +127,23 @@ function LeadForm({ lead, statusOptions, sourceOptions, priorityOptions, onSave,
           </select>
         </label>
         <label>
+          <label>
+  Assigned Agent
+  <select
+    value={formLead.assignedAgent || ""}
+    onChange={(e) =>
+      setFormLead({
+        ...formLead,
+        assignedAgent: e.target.value,
+      })
+    }
+  >
+    <option value="">Select Agent</option>
+    <option value="Samarth">Samarth</option>
+    <option value="Aryan">Aryan</option>
+    <option value="Sales Team">Sales Team</option>
+  </select>
+</label>
   Follow Up Date
   <input
     type="date"
